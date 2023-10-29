@@ -11,11 +11,13 @@ const customersSchema = new mongoose.Schema({
       required: [true,"Why you are scared to provide username ?"]
     },
     // username:String,
-    name: String,
+    name: {
+      type: String,
+
+    },
     address: String,
   });
   
   const Customers = mongoose.model("customers", customersSchema);
-
 
   module.exports=Customers
